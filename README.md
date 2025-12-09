@@ -5,7 +5,7 @@ This project implements a Gaussian Mixture Generative Adversarial Network (GMGAN
 ## Project Structure
 
 ```
-ASSIGNMENT2-2025-DSL/
+gmgan-mnist/
 ├── checkpoints/
 │   └── G.pth
 ├── gaussian_mixture/
