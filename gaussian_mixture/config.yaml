@@ -1,0 +1,28 @@
+experiment:
+  name : 'gmm'
+
+data :
+  pin_memory: True                # False if device=mps
+  num_workers: 4
+
+training:
+  batch_generator: 128
+  batch_discriminator: 64
+  learning_rate: 0.0002
+  epochs: 2
+  optimizer: Adam
+  d_noise_std: 0.01               # Gaussian noise for discriminator
+
+model:
+  mnist_dim: 784
+  latent_dim: 100                 # Dimension of the latent space
+  K: 10                           # Number of Gaussian in the mixture
+  sigma: 0.1
+  c : 0.1
+  d_dropout: 0.3
+  mode: static
+
+environment :
+  local : True                    # False if on cluster
+  device : mps
+  gpus : -1                       # If -1, using all available GPUs
